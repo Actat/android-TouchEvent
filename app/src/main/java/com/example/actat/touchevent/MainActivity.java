@@ -23,14 +23,20 @@ public class MainActivity extends AppCompatActivity {
         String action = "";
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                action = "ACTION_DOWN";
+                action = "ACTION_DOWN  ";
                 break;
             case MotionEvent.ACTION_UP:
-                action = "ACTION_UP";
+                action = "ACTION_UP    ";
+                break;
+            case MotionEvent.ACTION_MOVE:
+                action = "ACTION_MOVE  ";
+                break;
+            case MotionEvent.ACTION_CANCEL:
+                action = "ACTION_CANCEL";
                 break;
         }
 
-        Log.v("MotionEvent", /* "action = " + action + ", " + */ "x = " + String.valueOf(event.getX()) + ". " + "y = " + String.valueOf(event.getY()) + "\t" + "width = " + String.valueOf(layoutWidth) + ", height = " + String.valueOf(layoutHeight) + "\n");
+        Log.v("MotionEvent", "action = " + action + "\t" +  "x = " + String.valueOf(event.getX()) + "  \t" + "y = " + String.valueOf(event.getY()) + "  \t" + "width = " + String.valueOf(layoutWidth) + ", height = " + String.valueOf(layoutHeight) + "\n");
 
         return super.onTouchEvent(event);
     }
