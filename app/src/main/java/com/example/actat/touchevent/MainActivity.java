@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        dp = getResources().getDisplayMetrics().density;
     }
 
     @Override
@@ -52,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
+
+        dp = getResources().getDisplayMetrics().density;
 
         ConstraintLayout layout = findViewById(R.id.activity_main);
         layoutWidth = layout.getWidth();
