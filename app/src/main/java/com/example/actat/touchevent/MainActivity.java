@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        Log.v("MotionEvent", "action = " + action + "\t" +  "x = " + String.valueOf(event.getX()) + "  \t" + "y = " + String.valueOf(event.getY()) + "  \t" + "width = " + String.valueOf(layoutWidth) + ", height = " + String.valueOf(layoutHeight) + "  \t" + "statusbarHeight = " + String.valueOf(statusBarHeight) + "  \t" + "contentTop = " + String.valueOf(contentViewTop) + "\n");
+        Log.v("MotionEvent", "action = " + action + "\t" +  "x = " + String.valueOf(event.getX()) + "  \t" + "y = " + String.valueOf(event.getY() - contentViewTop) + "\n");
 
         return super.onTouchEvent(event);
     }
